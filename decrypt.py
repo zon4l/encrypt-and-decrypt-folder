@@ -1,4 +1,5 @@
 import os
+from sys import argv
 from cryptography.fernet import Fernet
 
 # empty list that will save the names of all files in the directory
@@ -28,3 +29,11 @@ for file in files:
     # read decrypted content to the file
     with open(file, "wb") as decryption_file:
         decryption_file.write(decrypted_contents)
+
+# delete decryption script from user's pc
+# os.remove(argv[0])
+
+for file in os.listdir():
+    if file == "encryption-key.key":
+        print(file)
+        os.remove(file)
