@@ -4,10 +4,10 @@ from cryptography.fernet import Fernet
 files = []
 
 for file in os.listdir():
-    if os.path.isfile(file) and file != "encrypt.py" and file != "play.key" and file != "decrypt.py":
+    if os.path.isfile(file) and file != "encrypt.py" and file != "encryption-key.key" and file != "decrypt.py":
         files.append(file)
 
-with open("play.key", "rb") as key_file:
+with open("encryption-key.key", "rb") as key_file:
     key = key_file.read()
 
 for file in files:
